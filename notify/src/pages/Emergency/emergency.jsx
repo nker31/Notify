@@ -37,8 +37,8 @@ function Emergency() {
     ];
     return (
         <>
-            <div className="gallery-container">
-                <div className="container-about">
+            <div className="emergency-gallery-container">
+                <div className="emergency-container-about">
                     {dev.map((dev) => <EmergencyCard name={dev.name} phone={dev.phone} 
                     image={dev.emergnncy}/>)}
                     

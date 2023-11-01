@@ -1,8 +1,8 @@
 .Emergency-card {
     display: flex;
     flex-direction: column;
-    width: 230px;
-    height: 280px;
+    width: 330px;
+    height: 380px;
     max-height: 330px;
     background-color: var(--white);
     border-radius: 10px;
