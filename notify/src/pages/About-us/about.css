@@ -6,11 +6,15 @@
 
 .about-banner {
     position: relative;
+    /* border: 1px solid #000000; */
     overflow: hidden;
 }
 
 .about-banner img{
     position: absolute;
+    /* border: 1px solid #000000; */
+    width: 100%;
+    background-size: cover;
   left: 0px;
   top: 0px;
   z-index: -1;

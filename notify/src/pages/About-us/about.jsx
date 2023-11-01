@@ -12,6 +12,11 @@ import bannerImg from '../../images/map-background.png'
 function About(){
     const dev = [
         {
+            name: 'Phoomtep Pitakamnuay',
+            id: 1630704896,
+            profile: Phoomtep
+        },
+        {
             name: 'Nathat Kuanthanom',
             id: 1630704045,
             profile: Peam
@@ -20,11 +25,6 @@ function About(){
             name: 'Poomwipat Yimyailuang',
             id: 1630704284,
             profile: MF
-        },
-        {
-            name: 'Phoomtep Pitakamnuay',
-            id: 1630704896,
-            profile: Phoomtep
         },
         {
             name: 'Pansawut Pujachareon',
