@@ -4,30 +4,49 @@
     box-sizing: border-box;
 }
 
-.hero-about {
-    background-color: #f0f0f0; /* สีเทา */
-    padding: 50px;
+.about-banner {
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-con-about {
-    display: flex;
+.about-banner img{
+    position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  opacity: 0.5;
 }
 
-.hero-info-about {
+
+.about-banner-container {
+    /* background-color: #f0f0f0; */
+    padding: 60px;
     width: 100%;
-    padding: 2rem;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #000000; */
+    /* max-width: 1200px; */
+
 }
 
-.hero-info-about h3 {
+.about-banner-info {
+    width: 100%;
+    padding: 0 10rem;
+}
+
+.about-banner-info h3 {
     /*font-family: Open Sans;*/
-    font-size: 70px;
+    font-size: 50px;
 }
 
-.hero-info-about p {
+.about-banner-info p {
     margin: 1rem 0;
     color: #202124;
     /*font-family: Open Sans;*/
-    font-size: 50px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
@@ -38,41 +57,22 @@
     padding: 2rem;
 }
 
-.blog-about {
-    background: #ffffff;
+.gallery-container{
+    margin: 80px auto 0 auto;
+    /* border: 1px solid #000000; */
+    max-width: 1400px;
 }
 
 .container-about {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    margin-top: 150px;
-    align-items: center;
-    justify-content: center;
-}
-
-.blog-title-about{
-    margin: 2rem 0;
-}
-
-.blog-item-about{
     display: flex;
-    flex-direction: column; /* จัดวางเป็นแนวตั้ง */
-    align-items: center;    /* จัดวางกลางแนวนอน */
-    justify-content: center;/* จัดวางกลางแนวตั้ง */
-             /* กำหนดความสูงของ container */
+    justify-content: space-around;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    /* flex-direction: row;
+    justify-content: space-around; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    /* grid-gap: 1rem; */
+    
 }
 
-.blog-item-about img {
-    border-radius: 20px;
-    width: 100;
-}
-
-.blog-item-about h4 {
-    margin-top: 1rem;
-}
-
-.blog-item-about p {
-    margin: 1rem 0;
-}
 

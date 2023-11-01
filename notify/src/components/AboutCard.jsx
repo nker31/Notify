@@ -1,18 +1,18 @@
 import React from 'react'
-import Dew from '../images/imageteam/dew.jpg'
+
 import './AboutCard.css'
 
-function AboutCard() {
+function AboutCard(props) {
+  const prof_img = props.profile
+
   return (
-    <div class="about-card">
-    <img src={Dew} alt="Avatar"/>
-    <div class="about-container">
-    <h4><b>Nathat Kuanthanom</b></h4>
-    <p>Peam</p>
-    <p>Student ID: 1630704045</p>
-    <a href="https://nkpeam51.wixsite.com/nathatkuan31" target="_blank">My portfolio</a>
+    <div className="about-card">
+      <img src={prof_img} alt="Avatar"/>
+      <div className="about-card-container">
+        <h4><b>{props.name}</b></h4>
+        <p>ID: {props.id}</p>
+      </div>
     </div>
-</div>
   )
 }
 
