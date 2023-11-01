@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-emergency {
+    background-color: #f0f0f0;
+}
+
+.hero-con-emergency {
+    display: flex;
+}
+
+.hero-info-emergency {
+    width: 100%;
+    padding: 2rem;
+}
+
+.hero-info-emergency h3 {
+    font-size: 2rem;
+}
+
+.hero-info-emergency p {
+    margin: 1rem 0;
+}
+
+.hero-img-emergency img{
+    width: 100%;
+    padding: 2rem;
+}
+
+.blog-emergency {
+    background: #ffffff;
+}
+
+.blog-con-emergency {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    margin-top: 170px; /* หรือระยะห่างที่คุณต้องการ */
+}
+
+.blog-title-emergency{
+    margin: 2rem 0;
+}
+
+.blog-item-emergency{
+    display: flex;
+    flex-direction: column; /* จัดวางเป็นแนวตั้ง */
+    align-items: center;    /* จัดวางกลางแนวนอน */
+    justify-content: center;/* จัดวางกลางแนวตั้ง */
+             /* กำหนดความสูงของ container */
+}
+
+.blog-item-emergency img {
+    width: 100;
+}
+
+.blog-item-emergency h4 {
+    margin-top: 1rem;
+}
+
+.blog-item-emergency p {
+    margin: 1rem 0;
+}
+
+.blog-item-emergency a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #3D67E4;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px; /* หรือระยะห่างที่คุณต้องการ */
+}
