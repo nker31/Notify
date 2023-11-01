@@ -1,58 +1,50 @@
 import React from 'react';
 import './emergency.css';
-import Dew from '../../images/imageteam/dew.jpg';
-
-function Emergency(){
-    return(
+import firefiter from '../../images/image-emergency/firefighter.jpg'
+import EmergencyCard from '../../components/EmergencyCard';
+function Emergency() {
+    const dev = [
+        {
+            name: 'Kuy',
+            phone: 1630704896,
+            image: firefiter
+        },
+        {
+            name: 'Nathat Kuanthanom',
+            phone: 1630704045,
+            image: firefiter
+        },
+        {
+            name: 'Poomwipat Yimyailuang',
+            phone: 1630704284,
+            image: firefiter
+        },
+        {
+            name: 'Pansawut Pujachareon',
+            phone: 1630704458,
+            image: firefiter
+        },
+        {
+            name: 'Surabadee Intanai',
+            phone: 1630704235,
+            image: firefiter
+        },
+        {
+            name: 'Kittipat Subprasert',
+            phone: 1630700225,
+            image: firefiter
+        }
+    ];
+    return (
         <>
-            <div class="hero-emergency">
-                <div class="container-emergency">
-                    <div class="hero-con-emergency">
-                        <div class="hero-info-emergency">
-                            <h3>About Us</h3>
-                            <p>The Notify website team is full of web development experts. Ready to contact and coordinate to assist you..</p>
-                        </div>
-                    </div>
+            <div className="gallery-container">
+                <div className="container-about">
+                    {dev.map((dev) => <EmergencyCard name={dev.name} phone={dev.phone} 
+                    image={dev.emergnncy}/>)}
+                    
                 </div>
             </div>
 
-            <div class="blog-about-emergency">
-                <div class="container-about">
-
-                    <div class="blog-con-emergency">
-                        <div class="blog-item-emergency">
-                            <img src={Dew} alt="Description" />
-                            <h4>dssdasdasdas</h4>
-                            <a href="https://www.udemy.com/course/fullstackwebdev/" target="_blank" class="blog-btn">Learn More</a>
-                        </div>
-
-                        <div class="blog-item-emergency">
-                        <img src={Dew} alt="Description" />
-                            <a href="https://www.udemy.com/course/fullstackwebdev/" target="_blank" class="blog-btn">Learn More</a>
-                        </div>
-
-                        <div class="blog-item-emergency">
-                        <img src={Dew} alt="Description" />
-                            <a href="https://www.udemy.com/course/fullstackwebdev/" target="_blank" class="blog-btn">Learn More</a>
-                        </div>
-
-                        <div class="blog-item-emergency">
-                        <img src={Dew} alt="Description" />
-                            <a href="https://www.udemy.com/course/fullstackwebdev/" target="_blank" class="blog-btn">Learn More</a>
-                        </div>
-
-                        <div class="blog-item-emergency">
-                        <img src={Dew} alt="Description" />
-                            <a href="https://www.udemy.com/course/fullstackwebdev/" target="_blank" class="blog-btn">Learn More</a>
-                        </div>
-
-                        <div class="blog-item-emergency">
-                        <img src={Dew} alt="Description" />
-                            <a href="https://www.udemy.com/course/fullstackwebdev/" target="_blank" class="blog-btn">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </>
     )
 }
