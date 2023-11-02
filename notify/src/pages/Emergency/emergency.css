@@ -37,8 +37,10 @@
 .emergency-container-about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
-    margin-top: 170px; /* หรือระยะห่างที่คุณต้องการ */
+    grid-gap: 5rem;
+    margin-top: 0px; /* หรือระยะห่างที่คุณต้องการ */
+    /*display: flex;
+    justify-content: space-around;*/
 }
 
 .blog-title-emergency{

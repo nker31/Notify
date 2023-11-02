@@ -5,7 +5,7 @@ import EmergencyCard from '../../components/EmergencyCard';
 function Emergency() {
     const dev = [
         {
-            name: 'Kuy',
+            name: 'Sawaddee',
             phone: 1630704896,
             image: firefiter
         },

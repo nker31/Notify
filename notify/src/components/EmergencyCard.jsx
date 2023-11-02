@@ -4,7 +4,7 @@ import './EmergencyCard.css'
 function EmergencyCard(props) {
     const props_img = props.emergency
     return (
-        <div classNameName="Emergency-card">
+        <div className="Emergency-card">
             <div className="Emergency-card-image-container">
                 <img src={props_img} alt="Avatar"/>
             </div>
