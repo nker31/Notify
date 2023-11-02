@@ -1,7 +1,7 @@
 .donate-page-container {
     /* border: 1px solid black; */
     width: 100%;
-    max-width: 800px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -24,10 +24,25 @@
 
 
 .donate-body {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     width: 100%;
     margin-top: 40px;
+}
+
+.donate-body-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate-body-right {
+    width: 50%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .donate-info-head {
@@ -61,4 +76,5 @@
     font-weight: bold;
     margin-top: 40px;
     cursor: pointer;
+    margin-left: 52%;
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import './Donate.css'
+import ImageSlider from '../../components/ImageSlider'
 
 function Donate() {
     return (
-        <>
             <div className='donate-page-container'>
                 <p className='total-donation-head-text'>
                     Total raised
@@ -16,7 +16,7 @@ function Donate() {
                 <div className='donate-body'>
 
                     <div className='donate-body-left'>
-                        
+                        <ImageSlider />
                     </div>
 
                     <div className='donate-body-right'>
@@ -38,7 +38,6 @@ function Donate() {
                         <br />
                         <div className='donate-info'>Your donation will help make a difference in the lives of those who have been affected by a natural disaster.  Thank you for your generosity.</div>
                     </div>
-
                 </div>
 
                 <div className="donate-button">
@@ -46,8 +45,6 @@ function Donate() {
                 </div>
 
             </div>
-
-        </>
     )
 }
 
