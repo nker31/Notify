@@ -2,7 +2,7 @@ import React from 'react'
 import './EmergencyCard.css'
 
 function EmergencyCard(props) {
-    const props_img = props.emergency
+    const props_img = props.image
     return (
         <div className="Emergency-card">
             <div className="Emergency-card-image-container">

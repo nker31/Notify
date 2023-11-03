@@ -1,38 +1,38 @@
 import React from 'react';
 import './emergency.css';
-import firefiter from '../../images/image-emergency/firefighter.jpg'
+import Firefighter from '../../images/image-emergency/firefighter.jpg'
 import EmergencyCard from '../../components/EmergencyCard';
 function Emergency() {
     const dev = [
         {
-            name: 'Sawaddee',
-            phone: 1630704896,
-            image: firefiter
+            name: 'Organizations:Firefighter',
+            phone: 'Phone:199',
+            image: Firefighter
         },
         {
-            name: 'Nathat Kuanthanom',
-            phone: 1630704045,
-            image: firefiter
+            name: 'Organizations:Police',
+            phone: 'Phone:191',
+            image: Firefighter
         },
         {
-            name: 'Poomwipat Yimyailuang',
-            phone: 1630704284,
-            image: firefiter
+            name: 'Organizations:Report a missing person',
+            phone: 'Phone:1300',
+            image: Firefighter
         },
         {
-            name: 'Pansawut Pujachareon',
-            phone: 1630704458,
-            image: firefiter
+            name: 'Organizations:Report a water accident',
+            phone: 'Phone:1195',
+            image: Firefighter
         },
         {
-            name: 'Surabadee Intanai',
-            phone: 1630704235,
-            image: firefiter
+            name: 'Organizations:National National Warning Center',
+            phone: 'Phone:192',
+            image: Firefighter
         },
         {
-            name: 'Kittipat Subprasert',
-            phone: 1630700225,
-            image: firefiter
+            name: 'Organizations:Crime Suppression Department',
+            phone: 'Phone:1195',
+            image: Firefighter
         }
     ];
     return (
@@ -40,7 +40,7 @@ function Emergency() {
             <div className="emergency-gallery-container">
                 <div className="emergency-container-about">
                     {dev.map((dev) => <EmergencyCard name={dev.name} phone={dev.phone} 
-                    image={dev.emergnncy}/>)}
+                    image={dev.image}/>)}
                     
                 </div>
             </div>
