@@ -40,9 +40,9 @@ function Donate() {
                     </div>
                 </div>
 
-                <div className="donate-button">
+                <button className="donate-button" onClick={() => alert('Thank you for your support')}>
                     DONATE
-                </div>
+                </button>
 
             </div>
     )

@@ -6,7 +6,7 @@ import pic3 from '../images/donate3.jpg';
 
 const ImageSlider = () => {
   const [selected, setSelected] = useState(1);
-  
+
   const images = [
     pic1,
     pic2,
@@ -16,29 +16,33 @@ const ImageSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSelected((prevSelected) => (prevSelected % images.length) + 1);
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <div className="slider">
-      <div className="slides">
-        {images.map((image, index) => (
-          <div key={index} className={`slide ${selected === index + 1 ? 'active' : ''}`}>
-            <img src={image} alt="" style={{ width: '100%' }} />
-          </div>
-        ))}
-        {/* <div className="navigation-auto">
-          {images.map((_, index) => (
-            <div key={index} className={`auto-btn ${selected === index + 1 ? 'active' : ''}`}></div>
+    <div className='slide-container'>
+      <div className="slider">
+        <div className="slides">
+          {images.map((image, index) => (
+            <div key={index} className={`slide ${selected === index + 1 ? 'active' : ''}`}>
+              <img src={image} alt="" style={{ width: '100%' }} />
+            </div>
           ))}
-        </div> */}
+        </div>
       </div>
-      {/* <div className="navigation-manual">
-        {images.map((_, index) => (
-          <label key={index} className={`manual-btn ${selected === index + 1 ? 'active' : ''}`} onClick={() => setSelected(index + 1)}></label>
-        ))}
-      </div> */}
+
+      <div className='description'>
+        Test
+      </div>
+
+      <div className="navigation-container">
+        <div className="navigation-manual">
+          {images.map((_, index) => (
+            <label key={index} className={`manual-btn ${selected === index + 1 ? 'active' : ''}`} onClick={() => setSelected(index + 1)}></label>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
