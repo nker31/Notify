@@ -38,7 +38,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
-    margin-top: 1rem;
+    margin-top: 5rem;
     place-items: center;
 }
 
