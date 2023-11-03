@@ -33,7 +33,9 @@ const ImageSlider = () => {
       </div>
 
       <div className='description'>
-        Test
+        <p className='description-paragraph'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est asperiores pariatur inventore consequatur ex provident et dolores, fugit illo at a architecto quaerat, molestiae molestias
+        </p>
       </div>
 
       <div className="navigation-container">
