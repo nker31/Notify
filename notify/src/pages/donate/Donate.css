@@ -42,7 +42,6 @@
     margin-left: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .donate-info-head {
@@ -79,4 +78,9 @@
     cursor: pointer;
     margin-left: 52%;
     border: none;
+}
+
+.donate-qr{
+    border-radius: 20px;
+    width: 50%;
 }
