@@ -6,11 +6,15 @@ import Register from './pages/register-page/Register';
 import About from './pages/About-us/about';
 import Emergency from './pages/Emergency/emergency'
 import EmergencyCard from './components/EmergencyCard';
+import Fotterbottom from './components/footerbottom'
+import Fotterbottommore from './components/footerbottommore'
 function App() {
   return (
     <>
       <Navbar/>
-      <About/>
+      <Emergency/>
+      <Fotterbottom/>
+      <Fotterbottommore/>
       {/* <Register/> */}
     </>
   );

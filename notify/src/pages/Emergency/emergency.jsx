@@ -64,11 +64,6 @@ function Emergency() {
                 </div>
             </div>
 
-            <div className="emergency-footer-bottom">
-                <p>© 2023 Notify. All Rights Reserved.</p>
-                {/* You can add more content here like links, images, etc. */}
-            </div>
-
         </>
     )
 }
