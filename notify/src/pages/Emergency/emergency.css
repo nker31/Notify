@@ -1,79 +1,41 @@
-* {
+/** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.hero-emergency {
-    background-color: #f0f0f0;
-}
-
-.hero-con-emergency {
-    display: flex;
-}
-
-.hero-info-emergency {
-    width: 100%;
-    padding: 2rem;
-}
-
-.hero-info-emergency h3 {
-    font-size: 2rem;
-}
-
-.hero-info-emergency p {
-    margin: 1rem 0;
-}
-
-.hero-img-emergency img{
-    width: 100%;
-    padding: 2rem;
-}
-
-.blog-emergency {
-    background: #ffffff;
-}
-
 .emergency-container-about {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
     margin-top: 5rem;
     place-items: center;
 }
-
-.blog-title-emergency{
-    margin: 2rem 0;
-}
-
-.blog-item-emergency{
-    display: flex;
-    flex-direction: column; /* จัดวางเป็นแนวตั้ง */
-    align-items: center;    /* จัดวางกลางแนวนอน */
-    justify-content: center;/* จัดวางกลางแนวตั้ง */
-             /* กำหนดความสูงของ container */
-}
-
-.blog-item-emergency img {
-    width: 100;
-}
-
-.blog-item-emergency h4 {
-    margin-top: 1rem;
-}
-
-.blog-item-emergency p {
-    margin: 1rem 0;
-}
-
-.blog-item-emergency a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-color: #3D67E4;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-top: 20px; /* หรือระยะห่างที่คุณต้องการ */
-}
+*/
+.emergency-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* แบ่งเป็น 3 คอลัมน์ที่มีขนาดเท่ากัน */
+    margin-top: 5rem;
+  }
+  
+  .emergency-container-about {
+    display: contents;
+  }
+  
+  /* สำหรับการจัด card ให้กึ่งกลางบนบรรทัดที่ 2 */
+  .emergency-container-about > :nth-child(5),
+  .emergency-container-about > :nth-child(6) {
+    grid-column: 2 / span 1; /* จะเริ่มจากคอลัมน์ที่ 2 และขยายครอบคลุม 1 คอลัมน์ */
+  }
+  
+  /* ถ้าคุณต้องการให้ card บนบรรทัดที่ 2 อยู่กึ่งกลางจริงๆ โดยมีช่องว่างทั้งซ้ายและขวา คุณอาจต้องการจัดให้เป็น 3 คอลัมน์เท่ากัน */
+  
+  .emergency-container-about > :nth-child(5) {
+    grid-column: 2 / span 1;
+    margin-top: 5rem;
+  }
+  
+  .emergency-container-about > :nth-child(6) {
+    grid-column: 3 / span 1;
+    margin-top: 5rem;
+  }

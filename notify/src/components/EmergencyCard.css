@@ -1,8 +1,8 @@
 .Emergency-card {
   display: flex;
   flex-direction: column;
-  width: 430px;
-  height: 380px;
+  width: 330px;
+  height: 280px;
   max-height: 330px;
   background-color: var(--white);
   border-radius: 10px;
@@ -37,29 +37,29 @@
   .Emergency-card-title {
     margin: 0;
     font-size: 17px;
-    font-family: "Open Sans";
+    /*font-family: "Open Sans";*/
     font-weight: 600;
-    color: #1797b8;
+    color: #000000;
     cursor: default;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
+    /*-webkit-box-orient: vertical;*/
+    /*overflow: hidden;*/
+    /*display: -webkit-box;*/
+    /*-webkit-line-clamp: 1;*/
+    /*line-clamp: 1;*/
   }
   
   .Emergency-card-des {
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    margin: 0;
+    /*-webkit-box-orient: vertical;
+    overflow: hidden;*/
+    /*display: -webkit-box;*/
+    /*-webkit-line-clamp: 1;*/
+    /*line-clamp: 1;*/
+    /*margin: 0;*/
     font-size: 17px;
-    font-family: "Open Sans";
-    color: #1797b8;
+    /*font-family: "Open Sans";*/
+    color: #000000;
     cursor: default;
-    margin-top: 1rem;
+    margin-top: 10px;
   }
   
 
