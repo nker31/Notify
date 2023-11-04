@@ -4,12 +4,15 @@ import Navbar from './components/navbar';
 import SignIn from './pages/sign-in-page/SignIn';
 import Register from './pages/register-page/Register';
 
+import Donate from './pages/donate/Donate';
+
 function App() {
   return (
     <>
       <Navbar/>
-      <SignIn/>
-      {/* <Register/> */}
+      <Donate/>
+      {/* <SignIn/>
+      <Register/> */}
     </>
   );
 }
