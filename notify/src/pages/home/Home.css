@@ -1,0 +1,32 @@
+.donate-page-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.donate-body{
+    display: flex;
+    width: 100%;
+}
+
+.donate-body-left {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate-body-right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-block {
+    border: 1px solid black;
+    width: 50%;
+    height: 500px;
+    margin: 5%;
+    box-shadow: 0 4px 2px -2px rgb(200, 200, 200);
+}
