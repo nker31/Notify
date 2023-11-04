@@ -63,6 +63,12 @@ function About(){
                     
                 </div>
             </div>
+
+            <div className="about-footer-bottom">
+                <p>© 2023 Notify. All Rights Reserved.</p>
+                {/* You can add more content here like links, images, etc. */}
+            </div>
+
         </>
     )
 }

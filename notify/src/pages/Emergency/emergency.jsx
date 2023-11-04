@@ -6,6 +6,7 @@ import Police from '../../images/image-emergency/Police.jpg'
 import Wateracc from '../../images/image-emergency/warteracc.jpg'
 import Pp from '../../images/image-emergency/PP.jpg'
 import Tcsd from '../../images/image-emergency/TCSD.jpg'
+import bannerImg from '../../images/map-background.png'
 function Emergency() {
     const dev = [
         {
@@ -41,12 +42,31 @@ function Emergency() {
     ];
     return (
         <>
+            <div className="emergency-banner">
+
+                <img src={bannerImg} alt="" />
+
+                <div className="emergency-banner-container">
+                    <div className="emergency-banner-info">
+                        <h3>Emergency</h3>
+                        <p>When you need immediate assistance, you can call right away without having to enter any information.</p>
+                        {/*<p>The Notify website team is full of web development experts. Ready to contact and coordinate to assist you.</p>*/}
+                    </div>
+                </div>
+
+            </div>
+
             <div className="emergency-gallery-container">
                 <div className="emergency-container-about">
-                    {dev.map((dev) => <EmergencyCard name={dev.name} phone={dev.phone} 
-                    image={dev.image}/>)}
-                    
+                    {dev.map((dev) => <EmergencyCard name={dev.name} phone={dev.phone}
+                        image={dev.image} />)}
+
                 </div>
+            </div>
+
+            <div className="emergency-footer-bottom">
+                <p>© 2023 Notify. All Rights Reserved.</p>
+                {/* You can add more content here like links, images, etc. */}
             </div>
 
         </>
