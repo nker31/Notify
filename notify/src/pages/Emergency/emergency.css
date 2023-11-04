@@ -1,3 +1,5 @@
+/* Version 1*/
+
 /** {
     margin: 0;
     padding: 0;
@@ -12,6 +14,8 @@
     place-items: center;
 }
 */
+
+/* Version 2*/
 .emergency-gallery-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* แบ่งเป็น 3 คอลัมน์ที่มีขนาดเท่ากัน */
