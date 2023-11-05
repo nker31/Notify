@@ -9,13 +9,13 @@ import thunderstorm from '../../images/thunderstorm.png'
 function Home() {
   return (
     <div className='home-page-container'>
-      <div className="donate-body">
+      <div className="home-body">
 
-        <div className="donate-body-left">
-          {/* Map here */}
+        <div className="home-body-left">
+          
         </div>
 
-        <div className="donate-body-right">
+        <div className="home-body-right">
 
           <div className="show-detail-container">
             <div className="show-detail-head">

@@ -1,27 +1,24 @@
-.donate-page-container {
+.home-page-container {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1800px;;
     margin: 0 auto;
 }
 
-.donate-body{
+.home-body{
     display: flex;
     width: 100%;
+    /* border: #202124 solid 1px; */
 }
 
-.donate-body-left {
+.home-body-left {
     width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.donate-body-right {
+.home-body-right {
     display: flex;
     max-width: 30%;
     height: 600px;
     flex-direction: column;
-    /* background-color: aqua; */
 }
 
 .show-detail-container{
