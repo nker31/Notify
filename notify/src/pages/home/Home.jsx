@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import MapCompose from '../../components/MapCompose'
 import fire from '../../images/fire.png'
 import flood from '../../images/flood.png'
 import landslide from '../../images/landslide.png'
@@ -12,7 +13,9 @@ function Home() {
       <div className="home-body">
 
         <div className="home-body-left">
-          
+
+        <MapCompose/>
+
         </div>
 
         <div className="home-body-right">
