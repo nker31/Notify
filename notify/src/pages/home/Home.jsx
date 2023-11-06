@@ -16,7 +16,7 @@ function Home() {
 
           <div className='map-container'>
 
-            <MapCompose lat={13.7563} lng={100.5018} zoom={14} disableUI={false} />  {/* ส่งที่อยู่ปัจจุบัน */}
+            <MapCompose lat={14.0392343} lng={100.6144769} zoom={16} disableUI={false} />  {/* ส่งที่อยู่ปัจจุบัน */}
 
             <button className="report-button" onClick={() => alert("Report")}>
               Report
@@ -60,7 +60,7 @@ function Home() {
             <div className="minimap-container">
               <div className="mini-map">
 
-                <MapCompose lat={13.7563} lng={100.5018} zoom={18} disableUI={true} />
+                <MapCompose lat={14.0392343} lng={100.6144769} zoom={18} disableUI={true} />
 
               </div>
             </div>
