@@ -16,7 +16,11 @@ function Home() {
 
           <div className='map-container'>
 
-          <MapCompose lat={13.7563} lng={100.5018} zoom={14} disableUI={false}/>
+            <MapCompose lat={13.7563} lng={100.5018} zoom={14} disableUI={false} />  {/* ส่งที่อยู่ปัจจุบัน */}
+
+            <button className="report-button" onClick={() => alert("Report")}>
+              Report
+            </button>
 
           </div>
 
@@ -53,11 +57,12 @@ function Home() {
                 9 95 หมู่5 ซอยรังสิตภิรมย์ คลองหนึ่ง Khlong Luang District, Pathum Thani 12120
               </div>
             </div>
+            <div className="minimap-container">
+              <div className="mini-map">
 
-            <div className="mini-map">
+                <MapCompose lat={13.7563} lng={100.5018} zoom={18} disableUI={true} />
 
-              <MapCompose lat={13.7563} lng={100.5018} zoom={18} disableUI={true}/>
-
+              </div>
             </div>
           </div>
 
