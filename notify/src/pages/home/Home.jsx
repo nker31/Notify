@@ -14,7 +14,11 @@ function Home() {
 
         <div className="home-body-left">
 
-        <MapCompose/>
+          <div className='map-container'>
+
+            <MapCompose />
+
+          </div>
 
         </div>
 
@@ -52,7 +56,7 @@ function Home() {
 
             <div className="map">
 
-            
+
 
             </div>
           </div>
