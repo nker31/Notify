@@ -1,0 +1,99 @@
+.Reportadd-page-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.Reportadd-body {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 660px;
+    /* border: #202124 solid 1px; */
+}
+
+.Reportadd-body-left {
+    height: 100%;
+    width: 65%;
+    margin-right: 2%;
+}
+
+.Reportadd-map-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px 20px 20px 20px;
+    /* box-shadow: 0 6px 10px -2px rgb(200, 200, 200); */
+}
+
+.Reportadd-body-right {
+    max-width: 30%;
+    height: 100%;
+}
+
+.Reportadd-show-detail-container {
+    height: 660px;
+    position: relative;
+    width: 532px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 6px 10px -2px rgb(200, 200, 200);
+    background-color: white;
+}
+
+.Reportadd-show-detail-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Reportadd-title {
+    font-weight: bold;
+    font-size: 40px;
+    color: #202124;
+    margin-top: 7rem;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: 40px;
+    margin-top: 10px;
+    
+}
+
+button {
+    width: 30%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 11rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.Reportadd-mini-map {
+    height: 250px;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 6px 10px -2px rgb(200, 200, 200);
+}
