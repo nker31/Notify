@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Reportadd/>
+      <Home/>
       {/* <Donate/>
       <SignIn/>
       <Register/> */}
