@@ -3,15 +3,16 @@ import './App.css';
 import Navbar from './components/navbar';
 import SignIn from './pages/sign-in-page/SignIn';
 import Register from './pages/register-page/Register';
-
+import Home from './pages/home/Home';
 import Donate from './pages/donate/Donate';
 
 function App() {
   return (
     <>
       <Navbar/>
-      <Donate/>
-      {/* <SignIn/>
+      <Home/>
+      {/* <Donate/>
+      <SignIn/>
       <Register/> */}
     </>
   );
