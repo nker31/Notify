@@ -16,7 +16,7 @@ function Home() {
 
           <div className='map-container'>
 
-            <MapCompose />
+          <MapCompose lat={13.7563} lng={100.5018} zoom={14} disableUI={false}/>
 
           </div>
 
@@ -54,9 +54,9 @@ function Home() {
               </div>
             </div>
 
-            <div className="map">
+            <div className="mini-map">
 
-
+              <MapCompose lat={13.7563} lng={100.5018} zoom={18} disableUI={true}/>
 
             </div>
           </div>
