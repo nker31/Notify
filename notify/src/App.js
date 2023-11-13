@@ -8,6 +8,9 @@ import Emergency from './pages/Emergency/emergency'
 import EmergencyCard from './components/EmergencyCard';
 import Fotterbottom from './components/footerbottom'
 import Fotterbottommore from './components/footerbottommore'
+import Home from './pages/home/Home';
+import Donate from './pages/donate/Donate';
+
 function App() {
   return (
     <>
@@ -16,6 +19,12 @@ function App() {
       <Fotterbottom/>
       <Fotterbottommore/>
       {/* <Register/> */}
+
+      <Home/>
+      {/* <Donate/>
+      <SignIn/>
+      <Register/> */}
+
     </>
   );
 }
