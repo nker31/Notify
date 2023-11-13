@@ -1,0 +1,141 @@
+/* Version 1*/
+
+/** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.emergency-container-about {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    margin-top: 5rem;
+    place-items: center;
+}
+*/
+
+/* Version 2*/
+.emergency-banner {
+  position: relative;
+  /* border: 1px solid #000000; */
+  overflow: hidden;
+}
+
+.emergency-banner img {
+  position: absolute;
+  /* border: 1px solid #000000; */
+  width: 100%;
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+
+.emergency-banner-container {
+  /* background-color: #f0f0f0; */
+  padding: 60px;
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #000000; */
+  /* max-width: 1200px; */
+
+}
+
+.emergency-banner-info {
+  width: 100%;
+  padding: 0 10rem;
+}
+
+.emergency-banner-info h3 {
+  /*font-family: Open Sans;*/
+  margin: 1rem 0;
+  font-size: 50px;
+  text-align: center;
+}
+
+.emergency-banner-info p {
+  /*font-family: Open Sans;*/
+  margin: 1rem 0;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.emergency-gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 8rem;
+  place-items: center;
+  row-gap: 30px;
+  column-gap: 30px;
+  justify-content: center;
+  /* This will center the grid horizontally if there is extra space in the container */
+  width: 100%;
+  max-width: 1500px;
+  margin: 8rem auto 0 auto;
+  /*border: 1px solid red;*/
+}
+
+.emergency-container-about {
+  display: contents;
+}
+
+/* สำหรับการจัด card ให้กึ่งกลางบนบรรทัดที่ 2 */
+.emergency-container-about> :nth-child(5),
+.emergency-container-about> :nth-child(6) {
+  grid-column: 2 / span 1;
+  /* จะเริ่มจากคอลัมน์ที่ 2 และขยายครอบคลุม 1 คอลัมน์ */
+}
+
+/* ถ้าคุณต้องการให้ card บนบรรทัดที่ 2 อยู่กึ่งกลางจริงๆ โดยมีช่องว่างทั้งซ้ายและขวา คุณอาจต้องการจัดให้เป็น 3 คอลัมน์เท่ากัน */
+
+.emergency-container-about> :nth-child(5) {
+  grid-column: 2 / span 1;
+  margin-top: 10px;
+}
+
+.emergency-container-about> :nth-child(6) {
+  grid-column: 3 / span 1;
+  margin-top: 1rem;
+}
+
+.emergency-bottom-banner {
+  position: relative;
+  /* border: 1px solid #000000; */
+  overflow: hidden;
+  height: 50px;
+}
+
+.emergency-bottom-banner img {
+  position: absolute;
+  /* border: 1px solid #000000; */
+  width: 100%;
+  background-size: cover;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+
+.emergency-bottom-banner-info {
+  width: 100%;
+  padding: 0 10rem;
+}
+
+.emergency-bottom-banner-info h3 {
+  /*font-family: Open Sans;*/
+  margin: 1rem 0;
+  font-size: 50px;
+  text-align: center;
+}
+
+
+/* You can add more styles as needed */

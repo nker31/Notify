@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+    background-color: #f0f0f0; /* Your desired background color */
+    text-align: center;
+    width: 100%;
+    padding: 10px 0; /* Adjust padding to suit your design */
+    position: fixed; /* or absolute if you prefer */
+    left: 0;
+    bottom: 0;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.footer-title {
+    font-size: 48px; /* Your desired font size */
+    font-weight: bold;
+    margin: 0;
+    color: #000; /* Your desired text color */
+}
+
+.footer-subtitle {
+    font-size: 18px; /* Your desired font size */
+    letter-spacing: 3px; /* Spacing between letters */
+    text-transform: uppercase;
+    margin: 4px 0; /* Adjust the margin as needed */
+    color: #000; /* Your desired text color */
+}
+
+.footer-phone {
+    font-size: 18px; /* Your desired font size */
+    margin: 4px 0; /* Adjust the margin as needed */
+    color: #000; /* Your desired text color */
+}
