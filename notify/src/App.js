@@ -6,8 +6,7 @@ import Register from './pages/register-page/Register';
 import About from './pages/About-us/about';
 import Emergency from './pages/Emergency/emergency'
 import EmergencyCard from './components/EmergencyCard';
-import Fotterbottom from './components/footerbottom'
-import Fotterbottommore from './components/footerbottommore'
+import Footer from './components/Footer';
 import Home from './pages/home/Home';
 import Donate from './pages/donate/Donate';
 
@@ -16,15 +15,13 @@ function App() {
     <>
       <Navbar/>
       <Emergency/>
-      <Fotterbottom/>
-      <Fotterbottommore/>
+
       {/* <Register/> */}
 
-      <Home/>
       {/* <Donate/>
       <SignIn/>
       <Register/> */}
-
+      <Footer/>
     </>
   );
 }
