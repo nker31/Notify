@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from '../../components/navbar'
 import './SignIn.css'
 function SignIn() {
   return (
     <>
+        <Navbar/>
         <div className="sign-in-bg">
             <div className="sign-in-page-container">
                 <div className="sign-in-box">
