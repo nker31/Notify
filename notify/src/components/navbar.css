@@ -8,7 +8,7 @@
 
 .nav-container{
     /* max-width: 990px; */
-    height: 60px;
+    min-height: 60px;
     margin: 0 auto;
     /* padding: 0 30px; */
     /* border: 1px solid green; */
@@ -27,6 +27,7 @@ nav{
   align-items: center;
   height: 60px;
   position: relative;
+  padding: 0 2rem;
     /* border: 1px solid green; */
 
 }
@@ -56,7 +57,13 @@ nav{
     line-height: normal;
     text-transform: capitalize;
     /* height: max-content; */
+    /* padding: 5px; */
 
+}
+
+.nav-menu li:hover{
+  /* background-color: black; */
+  
 }
 
 .nav-emergency{
@@ -69,14 +76,22 @@ nav{
 }
 
 
+.nav-menu li a:hover{
+    color: rgb(68, 66, 66);
+    text-decoration: none;
+    /* font-weight: 700; */
+}
+
+
 .nav-menu li a{
     text-decoration: none;
 }
 
+
 .nav-profile-icon svg{
     width: 32px;
     height: 32px;
-    color: rgba(32, 33, 36, 1);
+    color: rgba(32, 33, 36, 0.50);
 }
 
 main{
