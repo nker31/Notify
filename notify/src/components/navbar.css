@@ -12,13 +12,16 @@
     margin: 0 auto;
     /* padding: 0 30px; */
     /* border: 1px solid green; */
-
+ 
 }
 
 nav{
     align-items: center;
     background: #FFF;
-
+    /* top: 0;
+    left: 0;
+    right: 0;
+    position: absolute; */
 }
 
 .nav-wrapper{
@@ -75,6 +78,11 @@ nav{
     text-decoration: none;
 }
 
+.nav-li-profile{
+  color: rgba(32, 33, 36, 0.50);
+    text-decoration: none;
+    display: none;
+}
 
 .nav-menu li a:hover{
     color: rgb(68, 66, 66);
@@ -217,6 +225,14 @@ footer{
 
   .menu-active{
       display: block !important;
+    }
+
+    .nav-li-profile{
+      display: block;
+    }
+    .nav-profile-icon{
+      display: none;
+    
     }
 }
 

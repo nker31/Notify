@@ -28,7 +28,8 @@ function Navbar() {
               <li><a href="/" className='nav-li'>Donate</a></li>
               <li><a href="/" className='nav-li'>About us</a></li>
               <li><a href="/" className='nav-emergency'>Emergency</a></li>
-              <li><a href="/" className='nav-profile-icon'><MdOutlineAccountCircle/></a></li>
+              <li className='nav-profile-icon'><a href="/" ><MdOutlineAccountCircle/></a></li>
+              <li className='nav-li-profile'><a href="/" >Profile</a></li>
             </ul>
             <div className="ham-menu" onClick={toggleHam}>
               <div className="bar1"></div>
