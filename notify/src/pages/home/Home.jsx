@@ -10,7 +10,6 @@ import Navbar from '../../components/navbar'
 function Home() {
   return (
     <>
-    <Navbar />
     <div className='home-page-container'>
       <div className="home-body">
 
