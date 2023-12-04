@@ -1,4 +1,6 @@
 import React from 'react';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/Footer';
 import './emergency.css';
 import Firefighter from '../../images/image-emergency/firefighter.jpg';
 import EmergencyCard from '../../components/EmergencyCard';
@@ -42,6 +44,7 @@ function Emergency() {
     ];
     return (
         <>
+            <Navbar />
             <div className="emergency-banner">
 
                 <img src={bannerImg} alt="" />
@@ -63,7 +66,7 @@ function Emergency() {
 
                 </div>
             </div>
-
+            <Footer />
         </>
     )
 }

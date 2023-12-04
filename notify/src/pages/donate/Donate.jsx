@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Donate.css';
 import ImageSlider from '../../components/ImageSlider';
 import qr from '../../images/qr.jpg';
+import Navbar from '../../components/navbar';
 
 function Donate() {
     const [buttonState, setButtonState] = useState({ bgColor: '', text: 'DONATE', showImageSlider: true });
@@ -15,6 +16,8 @@ function Donate() {
     };
 
     return (
+        <>
+        <Navbar />
         <div className='donate-page-container'>
             <p className='total-donation-head-text'>Total raised</p>
             <br />
@@ -43,17 +46,18 @@ function Donate() {
                     <div className='donate-info-subhead'>Thank you for your support</div>
                     <br />
                     <div className='donate-info'>Your donation will help make a difference in the lives of those who have been affected by a natural disaster. Thank you for your generosity.</div>
+
+                    <button
+                        className="donate-button"
+                        style={{ backgroundColor: buttonState.bgColor }}
+                        onClick={handleButtonClick}
+                    >
+                    {buttonState.text}
+                     </button>
                 </div>
             </div>
-
-            <button
-                className="donate-button"
-                style={{ backgroundColor: buttonState.bgColor }}
-                onClick={handleButtonClick}
-            >
-                {buttonState.text}
-            </button>
         </div>
+        </>
     );
 }
 

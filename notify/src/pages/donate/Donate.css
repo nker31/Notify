@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     color: #202124;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: bold;
 }
 
@@ -28,6 +28,7 @@
     display: flex;
     width: 100%;
     margin-top: 40px;
+    padding: 0 5%;
 }
 
 .donate-body-left {
@@ -47,19 +48,19 @@
 .donate-info-head {
     font-weight: bold;
     color: #202124;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .donate-info-subhead {
     font-weight: 600;
     color: #202124;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.9;
 }
 
 .donate-info {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
     color: #5F6368;
 }
 
@@ -76,11 +77,18 @@
     font-weight: bold;
     margin-top: 40px;
     cursor: pointer;
-    margin-left: 52%;
+    /* margin-left: 52% */
     border: none;
+    transition: background-color 0.3s, transform 0.3s; /* For smooth transition */
+}
+
+.donate-button:hover {
+    background-color: #5078FF; /* A lighter shade of the button's original color */
+    transform: scale(1.05); /* Slightly increase the button size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
 }
 
 .donate-qr{
     border-radius: 20px;
-    width: 50%;
+    width: 70%;
 }

@@ -13,13 +13,16 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    
 }
 
 .sign-in-box{
     margin-top: 100px;
+    margin: 100px 30px 0 30px;
     width: 505px;
     height: 400px;
     flex-shrink: 0;
+    /* border: 1px solid red; */
 
     border-radius: 20px;
     background: #FFF;
@@ -38,13 +41,14 @@
 }
 
 .sign-in-box-container form{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .sign-in-box-container input{
-    width: 465px;
+    width: 100%;
     height: 60px;
     flex-shrink: 0;
 
@@ -108,4 +112,20 @@
 .sign-in-no-account-button:hover{
     cursor: pointer;
     color: black;
+}
+
+@media only screen and (max-width: 550px){
+    .sign-in-page-container{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .sign-in-box{
+        width: 100%;
+        height: 100%;
+    }
+
+    .sign-in-box-container{
+        margin: 30px auto;
+        padding: 0 15px;
+    }
 }

@@ -9,7 +9,7 @@
 }
 
 .register-box{
-    margin-top: 100px;
+    margin: 100px 30px 0 30px;
     width: 505px;
     min-height: 660px;
     flex-shrink: 0;
@@ -34,13 +34,14 @@
 }
 
 .register-box-container form{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .register-box-container input{
-    width: 465px;
+    width: 100%;
     height: 60px;
     flex-shrink: 0;
 
@@ -104,4 +105,20 @@
 .register-no-account-button:hover{
     cursor: pointer;
     color: black;
+}
+
+@media only screen and (max-width: 550px){
+    .register-page-container{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .register-box{
+        width: 100%;
+        height: 100%;
+    }
+
+    .register-box-container{
+        margin: 30px auto;
+        padding: 0 15px;
+    }
 }

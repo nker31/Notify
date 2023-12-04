@@ -1,5 +1,7 @@
 import React from 'react';
 import './about.css';
+import Navbar from '../../components/navbar';
+import Footer from '../../components/Footer';
 import Peam from '../../images/imageteam/peam.jpg';
 import MF from '../../images/imageteam/mf.JPG';
 import Phoomtep from '../../images/imageteam/phoom.png';
@@ -44,6 +46,7 @@ function About(){
     ];
     return(
         <>
+            <Navbar/>
             <div className="about-banner">
                     
                 <img src={bannerImg} alt="" />
@@ -63,6 +66,7 @@ function About(){
                     
                 </div>
             </div>
+            <Footer/>   
         </>
     )
 }

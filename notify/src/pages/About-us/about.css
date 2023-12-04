@@ -62,7 +62,7 @@
 }
 
 .gallery-container{
-    margin: 80px auto 0 auto;
+    margin: 80px auto 40px auto;
     /* border: 1px solid #000000; */
     max-width: 1400px;
 }
@@ -70,13 +70,81 @@
 .container-about {
     display: flex;
     justify-content: space-around;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-
-    /* flex-direction: row;
-    justify-content: space-around; */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
-    /* grid-gap: 1rem; */
     
 }
+
+@media screen and (max-width: 1400px) {
+    .container-about {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 1.5rem;
+        /* border: 1px solid #000000; */
+        max-width: 900px;
+        margin: 0 auto;
+        align-items: center; /* This centers the items vertically */
+        justify-items: center; /* This centers the items horizontally */
+    }
+    
+    .about-banner-info{
+        padding: 0 2.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    .gallery-container{
+        margin: 40px auto 40px auto;
+    }
+    .container-about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1.5rem;
+        /* border: 1px solid #000000; */
+        /* max-width: 900px; */
+        margin: 0 auto;
+        align-items: center; /* This centers the items vertically */
+        justify-items: center; /* This centers the items horizontally */
+    }
+    
+    .about-banner-container{
+        height: 250px;
+    }
+
+    .about-banner-info{
+        padding: 0 1rem;
+    }
+
+    .about-banner-info h3 {
+        font-size: 30px;
+    }
+
+    .about-banner-info p {
+        margin: 1rem 0;
+        color: #202124;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container-about {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+        border: 1px solid #000000;
+        /* max-width: 900px; */
+        margin: 0 auto;
+        align-items: center; /* This centers the items vertically */
+        justify-items: center; /* This centers the items horizontally */
+    }
+    
+    .about-banner-info{
+        padding: 0 1rem;
+    }
+}
+   
+   
 
 

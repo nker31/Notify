@@ -68,11 +68,12 @@ function Register() {
                         <div className="register-box-line"></div>
                         <Link to='/login'><button className='register-no-account-button'>Already a member?</button></Link>
                     </div>
+              </div>
+                        </div>
+    </div>
+    </>
+  )
 
-                </div>
-            </div>
-        </div>
-    )
 }
 
 export default Register
