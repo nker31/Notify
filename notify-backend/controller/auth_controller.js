@@ -1,7 +1,6 @@
 import {UserModel} from '../models/userModel.js'
 
 export const login = (req, res) => {
-    console.log(req.body)
     const {email, password} = req.body;
     UserModel.findOne({email: email})
     .then(user => {
