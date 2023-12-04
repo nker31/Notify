@@ -13,15 +13,17 @@ import Donate from './pages/donate/Donate';
 function App() {
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Emergency/>
 
       {/* <Register/> */}
-
-      {/* <Donate/>
-      <SignIn/>
-      <Register/> */}
-      <Footer/>
+      {/* <About/> */}
+      {/* <Home/> */}
+      {/* <Donate/> */}
+      
+      {/* <SignIn/> */}
+      {/* <Register/> */}
+      {/* <Footer/> */}
     </>
   );
 }

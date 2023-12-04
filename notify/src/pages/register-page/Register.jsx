@@ -1,8 +1,11 @@
 import React from 'react'
 import './Register.css'
+import Navbar from '../../components/navbar'
 
 function Register() {
   return (
+    <>
+    <Navbar/>
     <div className='register-bg'>
         <div className="register-page-container">
             <div className="register-box">
@@ -25,6 +28,7 @@ function Register() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

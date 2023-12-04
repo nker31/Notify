@@ -35,10 +35,11 @@ const ImageSlider = () => {
         <div className="slides">
           {imageDetails.map((item, index) => (
             <div key={index} className={`slide ${selected === index + 1 ? 'active' : ''}`}>
-              <img src={item.image} alt="" style={{ width: '100%' }} />
+              <img className='slider-image' src={item.image} alt="" style={{ width: '100%' }} />
             </div>
           ))}
         </div>
+        
       </div>
 
       <div className='description'>
