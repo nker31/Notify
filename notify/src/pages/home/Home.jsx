@@ -6,9 +6,11 @@ import flood from '../../images/flood.png'
 import landslide from '../../images/landslide.png'
 import poweroutage from '../../images/poweroutage.png'
 import thunderstorm from '../../images/thunderstorm.png'
-
+import Navbar from '../../components/navbar'
 function Home() {
   return (
+    <>
+    <Navbar />
     <div className='home-page-container'>
       <div className="home-body">
 
@@ -69,6 +71,8 @@ function Home() {
         </div>
       </div>
     </div>
+    </>
+    
   )
 }
 
