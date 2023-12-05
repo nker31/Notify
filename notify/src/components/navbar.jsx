@@ -25,9 +25,9 @@ function Navbar() {
             </div>
             <ul className="nav-menu" id="myMenu">
               <li><a href="/" className='nav-li'>Home</a></li>
-              <li><a href="/" className='nav-li'>Donate</a></li>
-              <li><a href="/" className='nav-li'>About us</a></li>
-              <li><a href="/" className='nav-emergency'>Emergency</a></li>
+              <li><a href="/donate" className='nav-li'>Donate</a></li>
+              <li><a href="/about" className='nav-li'>About us</a></li>
+              <li><a href="/emergency" className='nav-emergency'>Emergency</a></li>
               <li className='nav-profile-icon'><a href="/" ><MdOutlineAccountCircle/></a></li>
               <li className='nav-li-profile'><a href="/" >Profile</a></li>
             </ul>

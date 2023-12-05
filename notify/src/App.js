@@ -22,9 +22,12 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/login' element={<SignIn/>}/>
-          <Route path='/home' element={<Home/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/login' element={<SignIn/>}/>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/donate' element={<Donate/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/emergency' element={<Emergency/>}/>
         </Routes>
         <Footer/>
       </Router>
