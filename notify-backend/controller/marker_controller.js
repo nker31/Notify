@@ -16,7 +16,7 @@ export const getDataById = (req, res) => {
     .catch(err => res.json(err))
 }
 export const deleteData = (req, res) => {
-    markersModel.deleteMany({})
+    markersModel.deleteMany({location: req.params.id})
     .then(markers => res.json(markers))
     .catch(err => res.json(err))
 }

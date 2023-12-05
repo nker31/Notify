@@ -8,11 +8,15 @@ import poweroutage from "../../images/poweroutage.png";
 import thunderstorm from "../../images/thunderstorm.png";
 import Navbar from "../../components/navbar";
 import axios from "axios";
+import Details from "../../components/Details";
+import AddReport from "../../components/AddReport";
+
 
 function Home() {
   const type = [fire, flood, landslide, poweroutage, thunderstorm];
   const [data, setData] = useState({
     type: fire,
+    name: "",
     details: "",
     requiredResources: "",
     location: "",
@@ -24,6 +28,7 @@ function Home() {
   });
 
   const [markers, setMarkers] = useState([]);
+  
   const getMarkers = async () => {
     try {
       const res = await axios.get("http://localhost:3001/api/markers");
@@ -44,50 +49,49 @@ function Home() {
       console.log(err);
     }
   };
-  const handleClick = (id) => {
-    getDataById(id);
-  };
+  // const handleClick = (id) => {
+  //   getDataById(id);
+  // };
 
   const createMark = async () => {
-    for (let i = 0; i < 10; i++) {
-      try {
+    // const minLat = 5;
+    // const maxLat = 20;
+    // const minLng = 97;
+    // const maxLng = 105;
 
-        const randomLat = 14.0392343 + (Math.random() - 0.5) * 0.15;
-        const randomLng = 100.6144769 + (Math.random() - 0.5) * 0.15;
+    // for (let i = 0; i < 10; i++) {
+    //   try {
+    //     const lat = minLat + Math.random() * (maxLat - minLat);
+    //     const lng = minLng + Math.random() * (maxLng - minLng);
 
-        await axios.post("http://localhost:3001/api/markers", {
-          type:type[Math.floor(Math.random() * 5)],
-          details: "test" + i,
-          requiredResources: "tes" + (i * i - i) + "t",
-          location: "tes" + i * i * i * 1.5 + "t",
-          position: {
-            lat: randomLat,
-            lng: randomLng,
-          },
-        });
-      } catch (err) {
-        console.log(err);
-      }
-    }
+    //     await axios.post("http://localhost:3001/api/markers", {
+    //       type: type[Math.floor(Math.random() * 5)],
+    //       details: "test" + i,
+    //       requiredResources: "test",
+    //       location: "testtype",
+    //       position: {
+    //         lat: lat,
+    //         lng: lng,
+    //       },
+    //     });
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // }
   };
-  function formatTimestamp(timestampStr) {
-    const date = new Date(timestampStr);
-    
-    // กำหนดตัวเลือกสำหรับการจัดรูปแบบ
-    const options = {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true,
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-    };
-  
-    // แปลงเป็นรูปแบบท้องถิ่นและแทนที่เครื่องหมายทับ '/' ด้วย '/'
-    return date.toLocaleString('en-US', options).replace(/\//g, '-');
-  }
-  
+  const [openReport, setOpenReport] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
+  const handleOpenReport = () => {
+    setOpenReport(true);
+    setShowDetails(false); // ปิด Details เมื่อแสดง Report
+  };
+
+  const handleClick = (id) => {
+    getDataById(id);
+    setShowDetails(true); // แสดง Details เมื่อมีการคลิก
+    setOpenReport(false); // ปิด Report
+  };
   return (
     <>
       <div className="home-page-container">
@@ -95,56 +99,21 @@ function Home() {
           <div className="home-body-left">
             <div className="map-container">
               <MapCompose
-                lat={14.0392343}
-                lng={100.6144769}
-                zoom={16}
+                data={data}
+                zoom={12}
                 disableUI={false}
                 handleClick={handleClick}
                 markers={markers}
               />
 
-              <button className="report-button" onClick={createMark}>
+              <button className="report-button" onClick={handleOpenReport}>
                 Report
               </button>
             </div>
           </div>
-
-          <div className="home-body-right">
-            <div className="show-detail-container">
-              <div className="show-detail-head">
-                <img src={data.type} className="show-detail-icon" />
-                <div className="show-detail-head-title">
-                  <div className="title">Match head fire</div>
-                  <p className="sub-title">
-                    {formatTimestamp(data.markerTimeStamp)}
-                     | Phoomtep Pitakamnuay
-                  </p>
-                </div>
-              </div>
-
-              <div className="show-detail-body">
-                <div className="show-detail-body-title">Details</div>
-                <div className="show-detail-body-detail">{data.details}</div>
-                <div className="show-detail-body-title">Required resources</div>
-                <div className="show-detail-body-detail">
-                  {data.requiredResources}
-                </div>
-                <div className="show-detail-body-title">Location</div>
-                <div className="show-detail-body-detail">{data.location}</div>
-              </div>
-              <div className="minimap-container">
-                <div className="mini-map">
-                  <MapCompose
-                    lat={data.position.lat}
-                    lng={data.position.lng}
-                    zoom={14}
-                    disableUI={true}
-                    handleClick={handleClick}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          {openReport && <AddReport openReport={openReport} setOpenReport={setOpenReport}/>}
+          {showDetails && <Details data={data} handleClick={handleClick}/>}
+          {/*<Details data={data} handleClick={handleClick}/>*/}
         </div>
       </div>
     </>

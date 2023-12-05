@@ -7,16 +7,21 @@ import poweroutage from '../images/poweroutage.png';
 import thunderstorm from '../images/thunderstorm.png';
 
 import axios from "axios";
-function MapCompose({ lat, lng, zoom, disableUI ,handleClick ,markers}) {
-    const position = { lat, lng };
-    const [mapContainer, setMapContainer] = useState(null);
+function MapCompose({ data, zoom, disableUI ,handleClick ,markers}) {
+
+    const [center, setCenter] = useState(data.position);
+
+    useEffect(() => {
+      setCenter(data.position);
+      console.log(data.position)
+    }, [data.position]);
+
     return (
         <APIProvider apiKey="AIzaSyAYWRedRUK6_0ol2PkQN3SJWgRfaO4dBY8">
-            <Map center={position} zoom={zoom} disableDefaultUI={disableUI} mapId={'b75c0b5de2f2fec7'}>
+            <Map center={center} zoom={zoom} disableDefaultUI={disableUI} mapId={'b75c0b5de2f2fec7'}>
                 {/* Add your map markers and other elements here */}
                 {markers?.map((marker, index) => (
                     <Marker 
-                        onLoad={console.log("marker loaded", position)}
                         position={marker.position} 
                         icon={{
                             url: marker.type,
