@@ -105,7 +105,6 @@ function Home() {
                 handleClick={handleClick}
                 markers={markers}
               />
-
               <button className="report-button" onClick={handleOpenReport}>
                 Report
               </button>

@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react'
-import Navbar from '../../components/navbar'
 import './SignIn.css'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 function SignIn() {
     const [email, setEmail] = useState()
@@ -12,21 +12,42 @@ function SignIn() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        axios.post('http://localhost:3001/login', {email, password})
+        const data = {email:email,password:password}
+        console.log(data)
+        
+        axios.post('http://localhost:3001/api/auth/login', data)
         .then(result => {
             console.log(result)
-            if(result.data === "Success"){
-                navigate('/home')
+            if (result.data === "Success") {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Register Successfully',
+                    showConfirmButton: false,
+                    timer: 1500,
+                }).then(() => {
+                    navigate('/')
+                });
+            } else if (result.data === "No record existed") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'No account found. Please register to continue.',
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'The email or password is incorrect.',
+                    showConfirmButton: false,
+                    timer: 2000,
+                });
             }
         })
         .catch(err => console.log(err))
-
     }
 
   return (
     <>
-        <Navbar/>
         <div className="sign-in-bg">
             <div className="sign-in-page-container">
                 <div className="sign-in-box">
@@ -55,7 +76,6 @@ function SignIn() {
                 </div>
             </div>
         </div>
-        
     </>
   )
 }
