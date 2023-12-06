@@ -46,7 +46,6 @@ function About(){
     ];
     return(
         <>
-            <Navbar/>
             <div className="about-banner">
                     
                 <img src={bannerImg} alt="" />
@@ -66,7 +65,6 @@ function About(){
                     
                 </div>
             </div>
-            <Footer/>   
         </>
     )
 }

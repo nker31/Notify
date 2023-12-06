@@ -19,9 +19,8 @@ function Register() {
     const confirmPasswordRef = useRef();
     const phoneNumberRef = useRef();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
         if (!validator.isEmail(email)) {
             Swal.fire({
                 icon: 'error',
@@ -185,4 +184,4 @@ function Register() {
     )
 }
 
-export default Register
+export default Register;

@@ -17,7 +17,6 @@ function Donate() {
 
     return (
         <>
-        <Navbar />
         <div className='donate-page-container'>
             <p className='total-donation-head-text'>Total raised</p>
             <br />

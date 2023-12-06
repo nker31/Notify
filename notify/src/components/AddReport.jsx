@@ -1,0 +1,181 @@
+import React, { useEffect, useState } from "react";
+import "../pages/home/Home.css";
+import MapCompose from "./MapCompose";
+import fire from "../images/fire.png";
+import flood from "../images/flood.png";
+import landslide from "../images/landslide.png";
+import poweroutage from "../images/poweroutage.png";
+import thunderstorm from "../images/thunderstorm.png";
+import validator from "validator";
+import Swal from "sweetalert2";
+import axios from "axios";
+function AddReport() {
+  const type = [
+    { label: "Please Select", value: "" },
+    { label: "fire", value: fire },
+    { label: "flood", value: flood },
+    { label: "landslide", value: landslide },
+    { label: "poweroutage", value: poweroutage },
+    { label: "thunderstorm", value: thunderstorm },
+  ];
+  const [data, setData] = useState({
+    type: "",
+    name: "",
+    details: "",
+    requiredResources: "",
+    location: "",
+    position: {
+      lat: 14.0392343,
+      lng: 100.6144769,
+    },
+  });
+
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    if (!validator.isLength(data.name, { min: 3, max: 50 })) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Name must be between 3 and 50 characters!",
+      });
+      return;
+    }
+    if (validator.isEmpty(data.type)) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please select a type!",
+      });
+      return;
+    }
+    if (!validator.isLength(data.details, { min: 3, max: 50 })) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Details must be between 3 and 50 characters!",
+      });
+      return;
+    }
+    if (!validator.isLength(data.requiredResources, { min: 3, max: 50 })) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Required resources must be between 3 and 50 characters!",
+      });
+      return;
+    }
+    if (!validator.isLength(data.location, { min: 3, max: 50 })) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Location must be between 3 and 50 characters!",
+      });
+      return;
+    }
+    if (validator.isEmpty(data.location)) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please Enable location!",
+        });
+        return;
+      }
+    try {
+      console.log(data);
+      const res = await axios.post("http://localhost:3001/api/markers", data);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(success, error);
+      } else {
+        console.log("Geolocation not supported");
+      }
+      function success(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+        setData((prevData) => ({
+            ...prevData,
+            coordinate: `${latitude}, ${longitude}`,
+          }))
+      }
+      
+      function error() {
+        console.log("Unable to retrieve your location");
+      }
+  }, []);
+
+  return (
+    <div className="home-body-right">
+      <div className="show-detail-container">
+        <div className="show-detail-head">
+          <div className="show-detail-head-title">
+            <div className="title">Report a accident</div>
+          </div>
+        </div>
+        <form onSubmit={handleClick}>
+          <div className="show-detail-body">
+            <div className="show-detail-body-title">Disaster Name</div>
+            <input
+              className="show-detail-body-input"
+              name="name"
+              onChange={handleChange}
+            ></input>
+            <div className="show-detail-body-title">Disaster type</div>
+            <label>
+              <select name="type" value={data.type} onChange={handleChange}>
+                {type.map((type) => (
+                  <option
+                    name="type"
+                    value={type.value}
+                    onChange={handleChange}
+                  >
+                    {type.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <div className="show-detail-body-title">Details</div>
+            <input
+              className="show-detail-body-input"
+              name="details"
+              onChange={handleChange}
+            ></input>
+            <div className="show-detail-body-title">Required resources</div>
+            <input
+              className="show-detail-body-input"
+              name="requiredResources"
+              onChange={handleChange}
+            ></input>
+            <div className="show-detail-body-title">Location</div>
+            <input
+              className="show-detail-body-input"
+              name="location"
+              onChange={handleChange}
+            ></input>
+            <div className="show-detail-body-title">Coordinate</div>
+            <input
+              type="coordinate"
+              value={data.coordinate}
+              className="show-detail-body-input"
+              name="coordinate"
+              onChange={handleChange}
+            ></input>
+            <br />
+            <button className="show-detail-body-button">Report</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default AddReport;

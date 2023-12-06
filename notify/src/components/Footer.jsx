@@ -11,7 +11,7 @@ function Footer() {
           {/* <span>Flowbite</span> */}
         </div>
         <div className="footer-links    ">
-          <a href="#">About us</a>
+          <a href="/about">About us</a>
           <a href="#" target='_blank'>Privacy Policy</a>
           < a href="#">Contact us</a>
         </div>

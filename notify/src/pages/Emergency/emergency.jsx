@@ -44,7 +44,6 @@ function Emergency() {
     ];
     return (
         <>
-            <Navbar />
             <div className="emergency-banner">
 
                 <img src={bannerImg} alt="" />
@@ -63,7 +62,6 @@ function Emergency() {
                 <div className="emergency-container-about">
                     {dev.map((dev) => <EmergencyCard name={dev.name} phone={dev.phone}
                         image={dev.image} />)}
-
                 </div>
             </div>
             <Footer />
