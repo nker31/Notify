@@ -60,7 +60,7 @@
     max-height: 660px;
 }
 
-.show-detail-container{
+.show-detail-box{
     display: flex;
     flex-direction: column;
     height: 660px;
