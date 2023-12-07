@@ -12,8 +12,8 @@ function Footer() {
         </div>
         <div className="footer-links    ">
           <a href="/about">About us</a>
-          <a href="#" target='_blank'>Privacy Policy</a>
-          < a href="#">Contact us</a>
+          <a href = "mailto: phoomtep.pita@bumail.net">Contact us</a>
+          
         </div>
         <div className="footer-copy">
           © 2023 Notify™. All Rights Reserved.
