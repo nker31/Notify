@@ -98,14 +98,16 @@ function Register() {
 
         axios.post('http://localhost:3001/api/auth/register', { email, username, password, phoneNumber })
             .then(result => {
-                console.log(result)
                 Swal.fire({
                     icon: 'success',
                     title: 'Register Successfully',
                     showConfirmButton: false,
                     timer: 1500,
                 }).then(() => {
-                    navigate('/login');
+                    axios.post('http://localhost:3001/api/auth/login', { email, password }).then(result => {
+                        localStorage.setItem('token', result.data.token)
+                        navigate('/')
+                    })
                 });
             })
             .catch(err => {

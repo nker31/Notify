@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect ,useContext } from 'react';
 import './navbar.css';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdOutlineAccountCircle } from 'react-icons/md';
-
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../AuthContext';
 function Navbar() {
   function toggleHam() {
     const x = document.querySelector(".ham-menu");
@@ -14,6 +17,44 @@ function Navbar() {
         myMenu.className = 'nav-menu';
     }
   }
+  const { isAuthenticated } = useContext(AuthContext);
+  const { setIsAuthenticated } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  // const authCheck = async () => {
+  //   try {
+  //     const res = await axios.get("http://localhost:3001/api/auth/verifyToken", {
+  //       withCredentials: true,
+  //     });
+  //     console.log(res.data.isAuthenticated);
+  //     setIsAuthenticated(res.data.isAuthenticated);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  // useEffect(() => {
+  //   authCheck();
+  // }, []);
+
+  const logout = async (e) => {
+    e.preventDefault();
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: "คุณต้องการออกจากระบบหรือไม่?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: 'grey',
+      confirmButtonText: 'ใช่ ออกจากระบบเลย!',
+      cancelButtonText: 'ยกเลิก'
+    });
+
+    if (result.isConfirmed) {
+      await axios.post("http://localhost:3001/api/auth/logout", "", { withCredentials: true });
+      setIsAuthenticated(false);
+      navigate("/login");
+    }
+  };
 
   return (
     <>
@@ -24,12 +65,19 @@ function Navbar() {
               <h3>Notify</h3>
             </div>
             <ul className="nav-menu" id="myMenu">
-              <li><a href="/" className='nav-li'>Home</a></li>
-              <li><a href="/donate" className='nav-li'>Donate</a></li>
-              <li><a href="/about" className='nav-li'>About us</a></li>
-              <li><a href="/emergency" className='nav-emergency'>Emergency</a></li>
-              <li className='nav-profile-icon'><a href="/" ><MdOutlineAccountCircle/></a></li>
-              <li className='nav-li-profile'><a href="/" >Profile</a></li>
+              <li><Link to="/" className='nav-li'>Home</Link></li>
+              <li><Link to="/donate" className='nav-li'>Donate</Link></li>
+              <li><Link to="/about" className='nav-li'>About us</Link></li>
+              <li><Link to="/emergency" className='nav-emergency'>Emergency</Link></li>
+              {isAuthenticated && (
+                  <li className='nav-profile-icon'>
+                    <MdOutlineAccountCircle/>
+                    <div className="dropdown-content">
+                      <a href="/" onClick={logout}>Logout</a>
+                    </div>
+                  </li>
+                )}
+              <li className='nav-li-profile'><Link to="/" onClick={logout}>Logout</Link></li>
             </ul>
             <div className="ham-menu" onClick={toggleHam}>
               <div className="bar1"></div>

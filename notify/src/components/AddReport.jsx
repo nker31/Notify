@@ -10,7 +10,7 @@ import thunderstorm from "../images/thunderstorm.png";
 import validator from "validator";
 import Swal from "sweetalert2";
 import axios from "axios";
-function AddReport() {
+function AddReport({ openReport, setOpenReport, getDataById }) {
   const type = [
     { label: "Please Select", value: "" },
     { label: "fire", value: fire },
@@ -78,40 +78,42 @@ function AddReport() {
       return;
     }
     if (validator.isEmpty(data.location)) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Please Enable location!",
-        });
-        return;
-      }
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please Enable location!",
+      });
+      return;
+    }
+    // Inside AddReport component's function that handles the form submission
     try {
-      console.log(data);
-      const res = await axios.post("http://localhost:3001/api/markers", data);
-      console.log(res);
+      const res = await axios.post("http://localhost:3001/api/markers", data, {
+        withCredentials: true,
+      });
+      // Call the passed-in getDataById function with the id
+      getDataById(res.data.id); // Assuming that the server responds with an object that has an `id` property
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   };
   useEffect(() => {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(success, error);
-      } else {
-        console.log("Geolocation not supported");
-      }
-      function success(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-        setData((prevData) => ({
-            ...prevData,
-            coordinate: `${latitude}, ${longitude}`,
-          }))
-      }
-      
-      function error() {
-        console.log("Unable to retrieve your location");
-      }
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      console.log("Geolocation not supported");
+    }
+    function success(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      setData((prevData) => ({
+        ...prevData,
+        position: { lat: latitude, lng: longitude },
+      }));
+    }
+
+    function error() {
+      console.log("Unable to retrieve your location");
+    }
   }, []);
 
   return (
@@ -168,8 +170,8 @@ function AddReport() {
             <div className="show-report-body-title">Coordinate</div>
             <input
               type="coordinate"
-              value={data.coordinate}
-              className="show-report-body-input"
+              value={data.position.lat + "," + data.position.lng}
+              className="show-detail-body-input"
               name="coordinate"
               onChange={handleChange}
             ></input>
