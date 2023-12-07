@@ -254,15 +254,25 @@ footer{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border: 1px solid #ddd;
+  /* border: 1px solid red; */
+  padding: 0 30px 0 0;
+  right: 0;
+  border-radius: 10px;
+
 }
 
 .dropdown-content a {
-  color: black;
+  /* color: black; */
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  color: rgba(216, 48, 37, 0.5);
+
 }
 
 .nav-profile-icon:hover .dropdown-content {
   display: block;
+  
+  
 }
