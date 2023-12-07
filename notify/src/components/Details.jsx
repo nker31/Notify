@@ -26,7 +26,8 @@ function Details({ handleClick, data }) {
   }, [data]);
   return (
     <div className="home-body-right">
-      <div className="show-detail-container">
+      <div className="show-detail-box">
+        
         <div className="show-detail-head">
           <img src={data.type} className="show-detail-icon" />
           <div className="show-detail-head-title">

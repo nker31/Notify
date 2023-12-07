@@ -29,7 +29,6 @@
     border-radius: 20px 20px 20px 20px;
     /* box-shadow: 0 6px 10px -2px rgb(200, 200, 200); */
 }
-
 .report-button{
     position: absolute;
     width: 130px;
@@ -45,6 +44,15 @@
     border: none;
     right: 62px;
     bottom: 22px;
+    transition: background-color 0.3s, transform 0.3s; /* For smooth transition */
+
+}
+
+
+.report-button:hover {
+    background-color: #5078FF; /* A lighter shade of the button's original color */
+    transform: scale(1.05); /* Slightly increase the button size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
 }
 
 .home-body-right {
