@@ -64,7 +64,6 @@ function Emergency() {
                         image={dev.image} />)}
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

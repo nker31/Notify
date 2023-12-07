@@ -23,7 +23,6 @@ function Details({ handleClick, data }) {
   }
   useEffect(() => {
     setCenter(data.position);
-    console.log(data);
   }, [data]);
   return (
     <div className="home-body-right">
@@ -33,7 +32,8 @@ function Details({ handleClick, data }) {
           <div className="show-detail-head-title">
             <div className="title">Match head fire</div>
             <p className="sub-title">
-              {formatTimestamp(data.markerTimeStamp)}| Phoomtep Pitakamnuay
+              {formatTimestamp(data.markerTimeStamp)}| {data && data.username ? data.username : "Phoomtep Pitakamnuay"}
+
             </p>
           </div>
         </div>

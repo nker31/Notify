@@ -49,36 +49,11 @@ function Home() {
       console.log(err);
     }
   };
-  // const handleClick = (id) => {
-  //   getDataById(id);
-  // };
-
-  const createMark = async () => {
-    // const minLat = 5;
-    // const maxLat = 20;
-    // const minLng = 97;
-    // const maxLng = 105;
-
-    // for (let i = 0; i < 10; i++) {
-    //   try {
-    //     const lat = minLat + Math.random() * (maxLat - minLat);
-    //     const lng = minLng + Math.random() * (maxLng - minLng);
-
-    //     await axios.post("http://localhost:3001/api/markers", {
-    //       type: type[Math.floor(Math.random() * 5)],
-    //       details: "test" + i,
-    //       requiredResources: "test",
-    //       location: "testtype",
-    //       position: {
-    //         lat: lat,
-    //         lng: lng,
-    //       },
-    //     });
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // }
-  };
+    const handleNewDataAdded = async (id) => {
+      await getDataById(id); // Wait for the data to be fetched
+      setShowDetails(true); // Then show the details
+      setOpenReport(false); // Then close the report
+    };
   const [openReport, setOpenReport] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -110,9 +85,8 @@ function Home() {
               </button>
             </div>
           </div>
-          {openReport && <AddReport openReport={openReport} setOpenReport={setOpenReport}/>}
+          {openReport && <AddReport openReport={openReport} setOpenReport={setOpenReport} getDataById={handleNewDataAdded}/>}
           {showDetails && <Details data={data} handleClick={handleClick}/>}
-          {/*<Details data={data} handleClick={handleClick}/>*/}
         </div>
       </div>
     </>

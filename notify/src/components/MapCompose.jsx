@@ -13,13 +13,11 @@ function MapCompose({ data, zoom, disableUI ,handleClick ,markers}) {
 
     useEffect(() => {
       setCenter(data.position);
-      console.log(data.position)
     }, [data.position]);
 
     return (
         <APIProvider apiKey="AIzaSyAYWRedRUK6_0ol2PkQN3SJWgRfaO4dBY8">
             <Map center={center} zoom={zoom} disableDefaultUI={disableUI} mapId={'b75c0b5de2f2fec7'}>
-                {/* Add your map markers and other elements here */}
                 {markers?.map((marker, index) => (
                     <Marker 
                         position={marker.position} 
