@@ -171,7 +171,7 @@ function AddReport({ openReport, setOpenReport, getDataById }) {
             <input
               type="coordinate"
               value={data.position.lat + "," + data.position.lng}
-              className="show-detail-body-input"
+              className="show-report-body-input"
               name="coordinate"
               onChange={handleChange}
             ></input>
