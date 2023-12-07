@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../pages/home/Home.css";
+// import "../pages/home/Home.css";
+import "./AddReport.css"
 import MapCompose from "./MapCompose";
 import fire from "../images/fire.png";
 import flood from "../images/flood.png";
@@ -115,23 +116,26 @@ function AddReport() {
 
   return (
     <div className="home-body-right">
-      <div className="show-detail-container">
-        <div className="show-detail-head">
-          <div className="show-detail-head-title">
-            <div className="title">Report a accident</div>
+      <div className="show-report-box">
+        {/* container */}
+        <div className="show-report-container">
+          {/* head */}
+          <div className="show-report-head">
+              <h1>Report an accident</h1>
           </div>
-        </div>
-        <form onSubmit={handleClick}>
+
+          {/* form */}
+          <form onSubmit={handleClick}>
           <div className="show-detail-body">
-            <div className="show-detail-body-title">Disaster Name</div>
+            <div className="show-report-body-title">Disaster Name</div>
             <input
-              className="show-detail-body-input"
+              className="show-report-body-input"
               name="name"
               onChange={handleChange}
             ></input>
-            <div className="show-detail-body-title">Disaster type</div>
+            <div className="show-report-body-title">Disaster type</div>
             <label>
-              <select name="type" value={data.type} onChange={handleChange}>
+              <select className="show-detail-disaster-select" name="type" value={data.type} onChange={handleChange}>
                 {type.map((type) => (
                   <option
                     name="type"
@@ -143,36 +147,38 @@ function AddReport() {
                 ))}
               </select>
             </label>
-            <div className="show-detail-body-title">Details</div>
+            <div className="show-report-body-title">Details</div>
             <input
-              className="show-detail-body-input"
+              className="show-report-body-input"
               name="details"
               onChange={handleChange}
             ></input>
-            <div className="show-detail-body-title">Required resources</div>
+            <div className="show-report-body-title">Required resources</div>
             <input
-              className="show-detail-body-input"
+              className="show-report-body-input"
               name="requiredResources"
               onChange={handleChange}
             ></input>
-            <div className="show-detail-body-title">Location</div>
+            <div className="show-report-body-title">Location</div>
             <input
-              className="show-detail-body-input"
+              className="show-report-body-input"
               name="location"
               onChange={handleChange}
             ></input>
-            <div className="show-detail-body-title">Coordinate</div>
+            <div className="show-report-body-title">Coordinate</div>
             <input
               type="coordinate"
               value={data.coordinate}
-              className="show-detail-body-input"
+              className="show-report-body-input"
               name="coordinate"
               onChange={handleChange}
             ></input>
             <br />
-            <button className="show-detail-body-button">Report</button>
+            <button className="show-report-body-button">Report</button>
           </div>
         </form>
+        </div>
+    
       </div>
     </div>
   );
