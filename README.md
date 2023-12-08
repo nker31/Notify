@@ -3,25 +3,42 @@
 ### Clone Notify from GitHub
 
 Open a terminal or command prompt.
-Run the command `git clone https://github.com/nker31/Notify.git` to clone the Notify repository.
+Run the command`git clone` to clone the Notify repository.
+
+```sh
+git clone https://github.com/nker31/Notify.git
+```
 
 ### Navigate to the Project Directory
 
-Change your current directory to the cloned repository by running `cd Notify-main`
+Change your current directory to the cloned repository by running
+
+```sh
+git cd Notify-main
+```
 
 ### Backend Setup
 
-Change directory to notify-backend using the command `cd notify-backend`
+Change directory to notify-backend using the command
+
+```sh
+cd notify-backend
+```
+
 Install necessary Node modules by running `npm install`.
 
 ### Database Connection
 
 Ensure you have MongoDB installed and running on your system.
-Configure the database connection settings in notify-backend/config.js.
+Configure the database connection settings in `notify-backend/config.js.`
 
 ### Start the Backend Server
 
-Within the notify-backend directory, start the server by executing `node index.js`
+Within the notify-backend directory, start the server by executing
+
+```sh
+node index.js
+```
 
 ### Client Setup
 
