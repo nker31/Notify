@@ -17,7 +17,11 @@ Change directory to notify-backend using the command
 cd notify-backend
 ```
 
-Install necessary Node modules by running `npm install`.
+Install necessary Node modules by running
+
+````sh
+npm install
+```.
 
 ### Database Connection
 
@@ -30,7 +34,7 @@ Within the notify-backend directory, start the server by executing
 
 ```sh
 node index.js
-```
+````
 
 ### Client Setup
 
