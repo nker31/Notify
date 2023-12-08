@@ -9,14 +9,6 @@ Run the command`git clone` to clone the Notify repository.
 git clone https://github.com/nker31/Notify.git
 ```
 
-### Navigate to the Project Directory
-
-Change your current directory to the cloned repository by running
-
-```sh
-git cd Notify-main
-```
-
 ### Backend Setup
 
 Change directory to notify-backend using the command
