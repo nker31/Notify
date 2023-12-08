@@ -68,7 +68,6 @@ export const logout = (req, res) => {
 };
 
 export const verifyToken = (req, res) => {
-  // assuming the accessToken is sent as a cookie
   const token = req.cookies.accessToken;
   if (token) {
     Jwt.verify(token, "secretkey", (err, decoded) => {

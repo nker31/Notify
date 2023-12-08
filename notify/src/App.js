@@ -9,7 +9,6 @@ import EmergencyCard from "./components/EmergencyCard";
 import Footer from "./components/Footer";
 import Home from "./pages/home/Home";
 import Donate from "./pages/donate/Donate";
-//import { Router } from 'express';
 import React from "react";
 import {
   BrowserRouter as Router,

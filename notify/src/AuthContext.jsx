@@ -8,7 +8,6 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Replace this with your actual token verification logic
     const verifyToken = async () => {
       try {
         const res = await axios.get("http://localhost:3001/api/auth/verifyToken", {

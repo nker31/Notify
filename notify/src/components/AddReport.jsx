@@ -85,13 +85,11 @@ function AddReport({ openReport, setOpenReport, getDataById }) {
       });
       return;
     }
-    // Inside AddReport component's function that handles the form submission
     try {
       const res = await axios.post("http://localhost:3001/api/markers", data, {
         withCredentials: true,
       });
-      // Call the passed-in getDataById function with the id
-      getDataById(res.data.id); // Assuming that the server responds with an object that has an `id` property
+      getDataById(res.data.id);
     } catch (err) {
       console.error(err);
     }

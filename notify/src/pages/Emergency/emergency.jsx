@@ -52,7 +52,6 @@ function Emergency() {
                     <div className="emergency-banner-info">
                         <h3>Emergency</h3>
                         <p>When you need immediate assistance, you can call right away without having to enter any information.</p>
-                        {/*<p>The Notify website team is full of web development experts. Ready to contact and coordinate to assist you.</p>*/}
                     </div>
                 </div>
 

@@ -21,21 +21,6 @@ function Navbar() {
   const { setIsAuthenticated } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // const authCheck = async () => {
-  //   try {
-  //     const res = await axios.get("http://localhost:3001/api/auth/verifyToken", {
-  //       withCredentials: true,
-  //     });
-  //     console.log(res.data.isAuthenticated);
-  //     setIsAuthenticated(res.data.isAuthenticated);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-  // useEffect(() => {
-  //   authCheck();
-  // }, []);
-
   const logout = async (e) => {
     e.preventDefault();
     const result = await Swal.fire({

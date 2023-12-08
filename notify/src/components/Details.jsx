@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../pages/home/Home.css";
+import "../pages/home";
 import MapCompose from "./MapCompose";
 import fire from "../images/fire.png";
 import flood from "../images/flood.png";
@@ -34,7 +34,6 @@ function Details({ handleClick, data }) {
             <div className="title">Match head fire</div>
             <p className="sub-title">
               {formatTimestamp(data.markerTimeStamp)}| {data && data.username ? data.username : "Phoomtep Pitakamnuay"}
-
             </p>
           </div>
         </div>

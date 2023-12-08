@@ -50,22 +50,22 @@ function Home() {
     }
   };
     const handleNewDataAdded = async (id) => {
-      await getDataById(id); // Wait for the data to be fetched
-      setShowDetails(true); // Then show the details
-      setOpenReport(false); // Then close the report
+      await getDataById(id);
+      setShowDetails(true);
+      setOpenReport(false);
     };
   const [openReport, setOpenReport] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
   const handleOpenReport = () => {
     setOpenReport(true);
-    setShowDetails(false); // ปิด Details เมื่อแสดง Report
+    setShowDetails(false);
   };
 
   const handleClick = (id) => {
     getDataById(id);
-    setShowDetails(true); // แสดง Details เมื่อมีการคลิก
-    setOpenReport(false); // ปิด Report
+    setShowDetails(true);
+    setOpenReport(false);
   };
   return (
     <>
