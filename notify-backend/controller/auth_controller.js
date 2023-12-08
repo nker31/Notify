@@ -71,11 +71,15 @@ export const verifyToken = (req, res) => {
   const token = req.cookies.accessToken;
   if (token) {
     Jwt.verify(token, "secretkey", (err, decoded) => {
-      if (err) {
-        res.status(401).json({ isAuthenticated: false });
-      } else {
-        res.status(200).json({ isAuthenticated: true });
-      }
+      console.log(decoded.userId)
+      UserModel.findById(decoded.userId).then((user) => {
+        console.log(user)
+        if (user) {
+          res.status(200).json({ isAuthenticated: true });
+        } else {
+          res.status(401).json({ isAuthenticated: false });
+        }
+      })
     });
   } else {
     res.json({ isAuthenticated: false });

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { createContext, useState, useEffect, useContext } from 'react';
 import "./Home.css";
 import MapCompose from "../../components/MapCompose";
 import fire from "../../images/fire.png";
@@ -13,6 +13,7 @@ import AddReport from "../../components/AddReport";
 
 
 function Home() {
+
   const type = [fire, flood, landslide, poweroutage, thunderstorm];
   const [data, setData] = useState({
     type: fire,
@@ -67,6 +68,7 @@ function Home() {
     setShowDetails(true);
     setOpenReport(false);
   };
+
   return (
     <>
       <div className="home-page-container">
