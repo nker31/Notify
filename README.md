@@ -36,9 +36,18 @@ node index.js
 
 Open another terminal or command prompt window.
 Navigate to the notify folder within the project directory.
-Install client-side Node modules by running `npm install`.
+Install client-side Node modules by running
+
+```sh
+npm install
+```
 
 ### Start the Client Application
 
-In the notify directory, start the client application using `npm start`.
+In the notify directory, start the client application using
+
+```sh
+npm start
+```
+
 The client application should now be running and accessible via a web browser.
