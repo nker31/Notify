@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../pages/home";
+import "../pages/home/Home.css";
 import MapCompose from "./MapCompose";
 import fire from "../images/fire.png";
 import flood from "../images/flood.png";
@@ -23,6 +23,7 @@ function Details({ handleClick, data }) {
   }
   useEffect(() => {
     setCenter(data.position);
+    console.log(data)
   }, [data]);
   return (
     <div className="home-body-right">
@@ -31,7 +32,7 @@ function Details({ handleClick, data }) {
         <div className="show-detail-head">
           <img src={data.type} className="show-detail-icon" />
           <div className="show-detail-head-title">
-            <div className="title">Match head fire</div>
+            <div className="title">{data.name}</div>
             <p className="sub-title">
               {formatTimestamp(data.markerTimeStamp)}| {data && data.username ? data.username : "Phoomtep Pitakamnuay"}
             </p>

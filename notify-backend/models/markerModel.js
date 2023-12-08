@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 const markerSchema = new mongoose.Schema({
     markerTimeStamp :{type : Date ,default: Date.now},
     username : String,
+    name: String,
     type: String,
     position:{ lat : Number, lng : Number },
     details: String,
